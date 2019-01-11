@@ -29,10 +29,11 @@ git log --graph 		Show log using an ASKII graph
 Note: Log information shows the current update first (top) and the older ones later (bottom)
 
 [Remote Control]
-git clone 	Copy from a remote repo to a local one
-git remote 	Connect a local repo to a remote one
-git remote -v 	Show status of a current local repo
-git push 		Push updates in a local repo to a remote one
-git fetch 		When files in the local repo and the remote one are different, 
-		this commands compare them and show the differences with a "git merge" command
-git pull 		Update the local repo by using the remote one
+git clone 			Copy from a remote repo to a local one
+git remote -v 			Show status of a current local repo
+git remote add Rrepo Httpgit 	Connect to a remote repo with its name Rrepo and location Httpgit
+git push Lrepo Rrepo 		Push updates of a local repo Lrepo to a remote one Rrepo
+git fetch 				When files in the local repo and the remote one are different, 
+				this commands compare them and show the differences 
+				with a "git merge" command
+git pull 				Update the local repo by using the remote one

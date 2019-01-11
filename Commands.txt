@@ -1,0 +1,38 @@
+User setting: 
+git config --global user.name "UserName"	for a commit, set global user as UserName 
+git config --global user.email "UserEmail" 	for a commit, set user email as UserEmail
+
+Local Repository (repo):
+git init 			Initialize a current folder as a git repository
+git add FileName 		Add a file to a repository. Git can track it
+git commit 		Push an updated file to a repo
+git status 		Show the current repo status
+
+[Branch related]
+git branch 		Show branches
+git branch Bname 		Create a branch called Bname
+git checkout Bname	Switch to Bname branch
+git checkout - b Bname 	Create Bname branch and switch to it
+git merge Bname		Merge Bname branch to the current one
+
+git commit -a 		Commit all (updated) files in a repo
+git commit -m "message" 	Commit and left a message 
+
+[Log]
+git log -p 		Show changed status at each command
+git log --word-diff 	Show results of diff command in a unit of word
+git log --stat		Show statistical results of a changed file at each commit
+git log --name-only 	Show the list of chaged files
+git log --relative-date	Show log by comparing time
+git log --graph 		Show log using an ASKII graph 
+
+Note: Log information shows the current update first (top) and the older ones later (bottom)
+
+[Remote Control]
+git clone 	Copy from a remote repo to a local one
+git remote 	Connect a local repo to a remote one
+git remote -v 	Show status of a current local repo
+git push 		Push updates in a local repo to a remote one
+git fetch 		When files in the local repo and the remote one are different, 
+		this commands compare them and show the differences with a "git merge" command
+git pull 		Update the local repo by using the remote one

@@ -1,0 +1,35 @@
+[]
+git tag Tname 			Tag a commit as Tname
+git tag -l 			Show the list of tags in the current folder
+git tag Tname Vsha 		Tag a commit of Vsha with Tname
+git tag -a Tname Vsha 		Tag a commit of Vsha with Tname, and add a message
+
+git show-ref --tags 		Show tag, commit, and SHA-1 values
+git show Tname 			Show commit information of Tname
+
+git commit --amend 		Revise an annotation by replacing the last commit
+
+git revert Vsha			Back to Vsha commit. Create a new commit to inform this change. 
+				Commits between the last and Vsha still exist.
+git reset 				Reverse to a specific version by removing recent commits
+git reset --hard 			Change: head location, index, directory
+git reset --mixed 			Change: haed location, index
+git reset --soft 			Change: head location
+git reset --soft HEAD~ 		~ (or ^) corresponds to one commit (from the most recent one)
+git reset --soft ORIG_HEAD 		Save the commit of deleting commit status due to git reset
+
+git checkout HEAD -- Fname 	The file Fname goes back to the last commit one.
+
+git rebase Bname			Merge branches to Bname branch by checking other branch status. 
+				(similar to git merge)
+git rebase --continue 		Continue rebase works after solving a problem
+git rebase --skip 			Force to merge. At the current branch, git rebase cannot be used anymore.
+git rebase --abort 			Cancel the 'git rebase' command
+git rebase -i 			Merge commit comments 
+
+[Note: recommend to use 
+pick 	for commit messages (ex> pick SHA-1 message)
+fixup 	for removing commit messages (ex> fixup SHA-1 message)
+left Sha-1 values
+It is not possible to revise pervious commit messages
+]
